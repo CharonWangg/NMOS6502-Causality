@@ -1,0 +1,89 @@
+DATA:
+    DATASET: nmos
+
+    DATA_PATH: ../envs/DonkeyKong/original_3510_512.npy # ../data_v4/original_3510_512.npy
+    TRAIN_PATH: ../envs/DonkeyKong/train_balanced_42.csv
+    VALID_PATH: ../envs/DonkeyKong/valid_balanced_42.csv
+    TEST_PATH: ../envs/DonkeyKong/valid_balanced_42.csv  # ../data_v4/full_1st_balanced_2class_42/valid_balanced_42.csv
+    NUM_TRAIN: 1.0 # -1 means all data
+    NUM_VALID: 1.0
+    NUM_TEST: 1.0
+    NUM_PREDICT: 1.0
+    TRAIN_BATCH_SIZE: 64
+    VALID_BATCH_SIZE: 64
+    TEST_BATCH_SIZE: 64
+
+    TRAIN_SIZE: 0.5 # 0.8 means 80% of data
+
+    # Augmentation
+    AUG: False
+    AUG_PROB: 0.5
+    IMG_MEAN: (0.485, 0.456, 0.406)
+    IMG_STD: (0.229, 0.224, 0.225)
+
+    # Label
+    NUM_CLASSES: 2
+
+    NUM_WORKERS: 24
+
+MODEL:
+    NAME: nmos_lstm
+    INPUT_SIZE: 2
+    INPUT_LENGTH: 512
+
+    ENCODER:
+        NAME: LSTM #sentence-transformers/all-MiniLM-L6-v2 # roberta-base
+        HIDDEN_SIZE: 32
+        NUM_LAYERS: 2
+
+    # MLP Head
+    ARG_COMP:
+        HIDDEN_SIZE: 32
+        OUTPUT_SIZE: 2
+
+    # Other Head (Attention)
+    EVENT_COMP:
+        HIDDEN_SIZE: 512
+        OUTPUT_SIZE: 256
+
+    DROPOUT: 0.0
+    L1: 0.0
+    L2: 0.0
+
+    SAVE_DIR: /home/charon/project/nmos_inference/models/
+
+
+OPTIMIZATION:
+    LOSS: diy  # cross_entropy, binary_cross_entropy, l1, l2, diy
+
+    MAX_EPOCHS: 50
+
+    # OPTIMIZER
+    OPTIMIZER: Adam  # Adam, SGD, RMSprop, AdamW, diy
+    LR: 0.001
+    WEIGHT_DECAY: 0.05
+    MOMENTUM: 0.9
+    EPSILON: 0.00000008
+    CORRECT_BIAS: True
+    MARGIN: 1.0
+
+    # SCHEDULER
+    LR_SCHEDULER: cosine  # cyclic, plateau, cosine, step
+    LR_WARMUP_EPOCHS: 5
+    LR_DECAY_STEPS: 20
+    LR_DECAY_RATE: 0.5
+    LR_DECAY_MIN_LR: 0.00001
+    PATIENCE: 20
+    ACC_GRADIENT_STEPS: 1
+
+LOG:
+    NAME: train_log
+    PATH: /home/charon/project/nmos_inference/log/
+
+PRECISION: 32
+
+GPUS: [0]
+
+STRATEGY: None
+
+SEED: 42

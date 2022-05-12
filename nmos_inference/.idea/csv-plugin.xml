@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="/data_v3/full_balanced_2class_42/valid_balanced_42.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/raw_data/transistors.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/data_v4/full_1st_balanced_2class_42/valid_balanced_42.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/models/DOWNSAMPLE_NOISE_TEST/models_log.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/models/DOWNSAMPLE_TEST/models_log.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/models/LSTM/models_log.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/models/LSTM/train_log/models_log.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/models/NOISE_TEST/models_log.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/models/TCN/models_log.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/models/TRM/models_log.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="&lt;641340c4-3cc5-4f59-8509-8417e283fe8d&gt;/nmos_inference/models/models_log.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
