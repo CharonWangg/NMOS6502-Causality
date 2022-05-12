@@ -9,8 +9,9 @@ A Machine Learning Project Discovering Causality in the NMOS6502.
 -  [Introduction](#introduction)
 -  [Requirements](#requirements)
 -  [Preparation](#preparation)
--  [Codebase Structure](#codebase-structure)
+-  [Codebase](#codebase)
 -  [Usage](#usage)
+-  [Partial Result](#partial-result)
 <!-- -  [Future Work](#future-work) -->
 <!-- -  [Acknowledgement](#acknowledgement) -->
 
@@ -36,7 +37,7 @@ Causal inference (CI) from time-varying data is an important issue in neuroscien
     pip install -r requirements.txt
     ```
 
-## Codebase Structure
+## Codebase
 ```
 ├── README.md
 ├── nmos_inference  # Infer causal relationship by different algorithms
@@ -50,14 +51,13 @@ Causal inference (CI) from time-varying data is an important issue in neuroscien
 │   │   ├── src  # Pipeline source code based on Pytorch Lightning
 │   │   │   ├── data # Load NMOS6502 data into pipeline
 │   │   │   ├── model # Load different models (LSTM, TCN, Transformers, FCN) into pipeline
-│   │   │   └── utils # Utils for config, data, model
+│   │   │   └── utils # Utils for config, data, model, logging
 │   │   ├── train.py
 │   │   ├── train.sh  # General training
 │   │   ├── train_by_cmd.py  # Core script for running .sh script
 │   │   ├── train_ds.sh  # Training under different down sample rate
 │   │   ├── train_noise.sh  # Training under noise of different standard deviation
 │   │   ├── train_ds_noise.sh  # Training under different combo of sample rate and noise
-│   │   ├── train_ds_noise.sh  # Training under different combo of sample rate and noise
 │   │   └── visualization.ipynb  # Visualization on the time series data and some circuts information
 │   ├── plot_utils 
 │   └── tests  # Test scripts of traditional methods (Pearson Correlation, Decorrelation, Mutual Information, Granger Causaltiy)
@@ -114,6 +114,17 @@ bash train_ds_noise.sh # Training under different noise and sample rate combinat
 ```
 python all_tests.py
 ```
+
+## Partial Results
+* Supervised procedure trained on Donkey Kong shows stable transferability on Pitfall and Space Invaders without retraining or finetuning, which still outperforms traditional methods. 
+<p align="center">
+    <img width="600"  alt="transfer_learning" src="https://github.com/CharonWangg/NMOS6502-Causality/blob/main/pics/transfer_learning.png#gh-dark-mode-only">
+</p>
+
+* Here we adopt different combinations of noise and down sample rate to simulate more and more severe reality condition. Compared to traditional methods, doing causal inference in a supervised mode can help algorithm keep model robustness and inference stability.
+<p align="center">
+     <img width="500" alt="double_aug" src="https://github.com/CharonWangg/NMOS6502-Causality/blob/main/pics/double_aug_chart.png#gh-dark-mode-only">
+</p>
 <!-- 
 ## Future Work
 Any kind of enhancement or contribution is welcomed. -->
