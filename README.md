@@ -9,9 +9,9 @@ A Machine Learning Project Discovering Causality in the NMOS6502.
 -  [Introduction](#introduction)
 -  [Requirements](#requirements)
 -  [Preparation](#preparation)
--  [Codebase Structure](#codebase-structure)
+-  [Codebase](#codebase)
 -  [Usage](#usage)
--  [Result](#result)
+-  [Partial Result](#partial-result)
 <!-- -  [Future Work](#future-work) -->
 <!-- -  [Acknowledgement](#acknowledgement) -->
 
@@ -37,7 +37,7 @@ Causal inference (CI) from time-varying data is an important issue in neuroscien
     pip install -r requirements.txt
     ```
 
-## Codebase Structure
+## Codebase
 ```
 ├── README.md
 ├── nmos_inference  # Infer causal relationship by different algorithms
@@ -116,7 +116,7 @@ bash train_ds_noise.sh # Training under different noise and sample rate combinat
 python all_tests.py
 ```
 
-## Result
+## Partial Results
 * Supervised procedure trained on Donkey Kong shows stable transferability on Pitfall and Space Invaders without retraining or finetuning, which still outperforms traditional methods. 
 <p align="center">
     <img width="600"  alt="transfer_learning" src="https://github.com/CharonWangg/NMOS6502-Causality/blob/main/pics/transfer_learning.png#gh-dark-mode-only">
