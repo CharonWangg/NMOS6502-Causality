@@ -11,6 +11,7 @@ A Machine Learning Project Discovering Causality in the NMOS6502.
 -  [Preparation](#preparation)
 -  [Codebase Structure](#codebase-structure)
 -  [Usage](#usage)
+-  [Result](#result)
 <!-- -  [Future Work](#future-work) -->
 <!-- -  [Acknowledgement](#acknowledgement) -->
 
@@ -114,6 +115,17 @@ bash train_ds_noise.sh # Training under different noise and sample rate combinat
 ```
 python all_tests.py
 ```
+
+## Result
+* Supervised procedure trained on Donkey Kong shows stable transferability on Pitfall and Space Invaders without retraining or finetuning, which still outperforms traditional methods. 
+<p align="center">
+    <img width="600"  alt="transfer_learning" src="https://github.com/CharonWangg/NMOS6502-Causality/blob/main/pics/transfer_learning.png#gh-dark-mode-only">
+</p>
+
+* Here we adopt different combinations of noise and down sample rate to simulate more and more severe reality condition. Compared to traditional methods, doing causal inference in a supervised mode can help algorithm keep model robustness and inference stability.
+<p align="center">
+     <img width="500" alt="double_aug" src="https://github.com/CharonWangg/NMOS6502-Causality/blob/main/pics/double_aug_chart.png#gh-dark-mode-only">
+</p>
 <!-- 
 ## Future Work
 Any kind of enhancement or contribution is welcomed. -->
