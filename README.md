@@ -12,7 +12,7 @@ A Machine Learning Project Discovering Causality in the NMOS6502.
 -  [Codebase](#codebase)
 -  [Usage](#usage)
 -  [Partial Result](#partial-result)
-<!-- -  [Future Work](#future-work) -->
+-  [Future Work](#future-work)
 <!-- -  [Acknowledgement](#acknowledgement) -->
 
 ## Introduction  
@@ -125,10 +125,10 @@ python all_tests.py
 <p align="center">
      <img width="500" alt="double_aug" src="https://github.com/CharonWangg/NMOS6502-Causality/blob/main/pics/double_aug_chart.png#gh-dark-mode-only">
 </p>
-<!-- 
-## Future Work
-Any kind of enhancement or contribution is welcomed. -->
 
+## Future Work
+* Sanity check on the conditional experiments
+* Explain why it works and verify if models areshortcut learning
 <!-- ## Acknowledgement -->
 
 
