@@ -1,4 +1,4 @@
-from test_compare_sims import *
+from SimInterface import *
 import os
 
 
