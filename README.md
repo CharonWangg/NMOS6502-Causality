@@ -51,14 +51,13 @@ Causal inference (CI) from time-varying data is an important issue in neuroscien
 │   │   ├── src  # Pipeline source code based on Pytorch Lightning
 │   │   │   ├── data # Load NMOS6502 data into pipeline
 │   │   │   ├── model # Load different models (LSTM, TCN, Transformers, FCN) into pipeline
-│   │   │   └── utils # Utils for config, data, model
+│   │   │   └── utils # Utils for config, data, model, logging
 │   │   ├── train.py
 │   │   ├── train.sh  # General training
 │   │   ├── train_by_cmd.py  # Core script for running .sh script
 │   │   ├── train_ds.sh  # Training under different down sample rate
 │   │   ├── train_noise.sh  # Training under noise of different standard deviation
 │   │   ├── train_ds_noise.sh  # Training under different combo of sample rate and noise
-│   │   ├── train_ds_noise.sh  # Training under different combo of sample rate and noise
 │   │   └── visualization.ipynb  # Visualization on the time series data and some circuts information
 │   ├── plot_utils 
 │   └── tests  # Test scripts of traditional methods (Pearson Correlation, Decorrelation, Mutual Information, Granger Causaltiy)
